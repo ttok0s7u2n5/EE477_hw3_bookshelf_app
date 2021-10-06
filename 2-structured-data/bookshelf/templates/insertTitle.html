@@ -1,0 +1,16 @@
+{# [START form] #}
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>{{action}} Search books by title</h3>
+
+<form action="/books/search_by_title" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <lable for="tit">Insert title</lable>
+    <input type="text" name="tit" id="tit" class="form-control"/>
+  </div>
+  <button type="submit" class="btn btn-success">Search</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{# [START form] #}
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>{{action}} Search books by author's name</h3>
+
+<form action="/books/search_by_author" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <lable for="aut">Insert author's name</lable>
+    <input type="text" name="aut" id="aut" class="form-control"/>
+  </div>
+  <button type="submit" class="btn btn-success">Search</button>
+</form>
+
+{% endblock %}
